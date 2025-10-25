@@ -55,7 +55,7 @@ export default function Navigation() {
             {/* Logo */}
             <motion.button
               onClick={() => scrollToSection('about')}
-              className="text-2xl md:text-3xl font-black tracking-tighter uppercase"
+              className="text-2xl md:text-3xl font-black tracking-tighter uppercase cursor-pointer"
               whileTap={{ scale: 0.95 }}
             >
               PORTFOLIO
@@ -67,7 +67,7 @@ export default function Navigation() {
                 <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-2 text-sm font-bold tracking-tight uppercase transition-all ${
+                  className={`px-4 py-2 text-sm font-bold tracking-tight uppercase transition-all cursor-pointer ${
                     activeSection === item.id
                       ? 'bg-[var(--accent-primary)] text-[var(--accent-secondary)]'
                       : 'hover:bg-[var(--bg-tertiary)]'
@@ -81,7 +81,7 @@ export default function Navigation() {
               {/* Theme Toggle */}
               <motion.button
                 onClick={toggleTheme}
-                className="ml-4 p-3 border-2 border-[var(--border-primary)] bg-[var(--bg-secondary)] hover:bg-[var(--bg-tertiary)]"
+                className="ml-4 p-3 border-2 border-[var(--border-primary)] bg-[var(--bg-secondary)] hover:bg-[var(--bg-tertiary)] cursor-pointer"
                 whileTap={{ scale: 0.95 }}
                 aria-label="Toggle theme"
               >
@@ -93,7 +93,7 @@ export default function Navigation() {
             <div className="md:hidden flex items-center gap-2">
               <motion.button
                 onClick={toggleTheme}
-                className="p-2 border-2 border-[var(--border-primary)]"
+                className="p-2 border-2 border-[var(--border-primary)] cursor-pointer"
                 whileTap={{ scale: 0.95 }}
                 aria-label="Toggle theme"
               >
@@ -102,7 +102,7 @@ export default function Navigation() {
 
               <motion.button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 border-2 border-[var(--border-primary)]"
+                className="p-2 border-2 border-[var(--border-primary)] cursor-pointer"
                 whileTap={{ scale: 0.95 }}
               >
                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -125,7 +125,7 @@ export default function Navigation() {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`w-full text-left px-4 py-3 text-lg font-bold uppercase border-2 border-[var(--border-primary)] ${
+                className={`w-full text-left px-4 py-3 text-lg font-bold uppercase border-2 border-[var(--border-primary)] cursor-pointer ${
                   activeSection === item.id
                     ? 'bg-[var(--accent-primary)] text-[var(--accent-secondary)]'
                     : 'bg-[var(--bg-secondary)]'

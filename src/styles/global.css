@@ -67,6 +67,22 @@ p {
   letter-spacing: -0.01em;
 }
 
+/* Reading font for product-oriented content */
+.reading-text {
+  font-family: 'Inter', 'Neue Haas Grotesk', sans-serif;
+  font-size: 1.74em;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.reading-text-small {
+  font-family: 'Inter', 'Neue Haas Grotesk', sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
 /* Brutalist borders and boxes */
 .brutal-border {
   border: 4px solid var(--border-primary);

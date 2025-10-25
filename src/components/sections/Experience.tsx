@@ -23,6 +23,17 @@ export default function Experience() {
           >
             Experience
           </h2>
+
+          <p
+            className="reading-text-small max-w-3xl mb-12"
+            style={{
+              color: 'var(--text-secondary)',
+              fontSize: '1.25rem'
+            }}
+          >
+            15+ years leading product teams and shipping solutions that drive business growth and user satisfaction
+          </p>
+
           <div
             className="h-1 w-32 mb-12"
             style={{ backgroundColor: 'var(--border-primary)' }}
@@ -33,7 +44,7 @@ export default function Experience() {
             className="text-center py-20 uppercase text-sm tracking-wide"
             style={{ color: 'var(--text-secondary)' }}
           >
-            Experience timeline will be added here
+            Timeline and detailed experience coming soon
           </div>
         </motion.div>
       </div>

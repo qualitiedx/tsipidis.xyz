@@ -23,6 +23,17 @@ export default function Projects() {
           >
             Projects
           </h2>
+
+          <p
+            className="reading-text-small max-w-3xl mb-12"
+            style={{
+              color: 'var(--text-secondary)',
+              fontSize: '1.25rem'
+            }}
+          >
+            From zero to one products that scaled to millions of users — each solving real problems with thoughtful execution
+          </p>
+
           <div
             className="h-1 w-32 mb-12"
             style={{ backgroundColor: 'var(--border-primary)' }}
@@ -33,7 +44,7 @@ export default function Projects() {
             className="text-center py-20 uppercase text-sm tracking-wide"
             style={{ color: 'var(--text-secondary)' }}
           >
-            Project showcase will be added here
+            Featured projects and case studies coming soon
           </div>
         </motion.div>
       </div>

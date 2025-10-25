@@ -29,16 +29,19 @@ export default function Contact() {
           </h2>
 
           <p
-            className="text-lg md:text-xl max-w-2xl mx-auto mb-12 uppercase tracking-wide"
-            style={{ color: 'var(--text-secondary)' }}
+            className="reading-text-small max-w-2xl mx-auto mb-12"
+            style={{
+              color: 'var(--text-secondary)',
+              fontSize: '1.25rem'
+            }}
           >
-            Have a project? Let's talk.
+            Whether you're launching a new product or scaling an existing one — let's explore how we can work together
           </p>
 
           {/* CTA Button */}
           <motion.a
             href="mailto:your.email@example.com"
-            className="inline-flex items-center gap-3 px-8 py-4 border-4 uppercase font-bold tracking-tight mb-16"
+            className="inline-flex items-center gap-3 px-8 py-4 border-4 uppercase font-bold tracking-tight mb-16 cursor-pointer hover:opacity-80 transition-opacity"
             style={{
               backgroundColor: 'var(--accent-primary)',
               color: 'var(--accent-secondary)',
@@ -62,12 +65,13 @@ export default function Contact() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 border-2 uppercase text-xs font-bold tracking-wide"
+                className="p-4 border-2 uppercase text-xs font-bold tracking-wide cursor-pointer transition-all"
                 style={{
                   backgroundColor: 'var(--bg-primary)',
                   color: 'var(--text-primary)',
                   borderColor: 'var(--border-primary)'
                 }}
+                whileHover={{ backgroundColor: 'var(--bg-tertiary)' }}
                 whileTap={{ scale: 0.95 }}
                 aria-label={label}
               >

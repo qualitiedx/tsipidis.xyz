@@ -23,6 +23,17 @@ export default function Approach() {
           >
             My Approach
           </h2>
+
+          <p
+            className="reading-text-small max-w-3xl mb-12"
+            style={{
+              color: 'var(--text-secondary)',
+              fontSize: '1.25rem'
+            }}
+          >
+            User-first thinking paired with data-driven decisions — balancing vision with pragmatism to ship what matters most
+          </p>
+
           <div
             className="h-1 w-32 mb-12"
             style={{ backgroundColor: 'var(--border-primary)' }}
