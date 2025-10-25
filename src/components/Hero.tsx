@@ -61,19 +61,29 @@ export default function Hero() {
         >
           {/* Main Title with Rotating Role */}
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-8 uppercase tracking-tighter leading-none">
-            <div className="mb-2" style={{ color: 'var(--text-primary)' }}>I'm a</div>
-            <div className="relative overflow-hidden min-h-[1.2em]">
+            <div
+              className="mb-2"
+              style={{
+                color: 'var(--text-primary)',
+                transform: 'scaleY(1.3)',
+                transformOrigin: 'top'
+              }}
+            >
+              I'm a
+            </div>
+            <div className="relative overflow-visible min-h-[1.2em]">
               <motion.div
                 key={currentRoleIndex}
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -100, opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="absolute inset-0"
+                className="absolute left-1/2 -translate-x-1/2"
                 style={{
                   color: 'var(--bg-primary)',
                   WebkitTextStrokeWidth: '2px',
-                  WebkitTextStrokeColor: 'var(--border-primary)'
+                  WebkitTextStrokeColor: 'var(--border-primary)',
+                  whiteSpace: 'nowrap'
                 }}
               >
                 {roles[currentRoleIndex]}
@@ -126,24 +136,24 @@ export default function Hero() {
             </motion.button>
           </motion.div>
         </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.button
-          onClick={() => scrollToSection('experience')}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            style={{ color: 'var(--text-secondary)' }}
-          >
-            <ChevronDown size={32} />
-          </motion.div>
-        </motion.button>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.button
+        onClick={() => scrollToSection('experience')}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer z-20"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          style={{ color: 'var(--text-secondary)' }}
+        >
+          <ChevronDown size={32} />
+        </motion.div>
+      </motion.button>
     </section>
   );
 }
