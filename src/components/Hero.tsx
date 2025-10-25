@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import HeroBackground from './HeroBackground';
+import HeroWireframe from './HeroWireframe';
 
 export default function Hero() {
   const roles = [
@@ -12,6 +14,7 @@ export default function Hero() {
   ];
 
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,12 +24,30 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 2;
+      setMousePosition({ x, y });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: 'var(--bg-gradient)' }}>
+      {/* Background Div - Full Width */}
+      <div
+        className="absolute inset-0 z-0"
+      >
+        <HeroWireframe />
+      </div>
+
       {/* Floating Particles */}
       {[...Array(30)].map((_, i) => (
         <motion.div
@@ -61,16 +82,26 @@ export default function Hero() {
         >
           {/* Main Title with Rotating Role */}
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-8 uppercase tracking-tighter leading-none">
-            <div
+            <motion.div
               className="mb-2"
               style={{
                 color: 'var(--text-primary)',
-                transform: 'scaleY(1.3)',
-                transformOrigin: 'top'
+                transformOrigin: 'top',
+                textShadow: '3px 3px 0 var(--bg-primary), -1px -1px 0 var(--bg-primary), 1px -1px 0 var(--bg-primary), -1px 1px 0 var(--bg-primary)'
+              }}
+              animate={{
+                x: mousePosition.x * 20,
+                y: mousePosition.y * 20,
+                scaleY: 1.3
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 150,
+                damping: 15
               }}
             >
               I'm a
-            </div>
+            </motion.div>
             <div className="relative overflow-visible min-h-[1.2em]">
               <motion.div
                 key={currentRoleIndex}
@@ -97,7 +128,11 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
             className="reading-text max-w-3xl mx-auto mb-12"
-            style={{ color: 'var(--text-secondary)', fontSize: '1.5rem' }}
+            style={{
+              color: 'var(--text-secondary)',
+              fontSize: '1.5rem',
+              textShadow: '2px 2px 0 var(--bg-primary), -1px -1px 0 var(--bg-primary)'
+            }}
           >
             Building products that matter
           </motion.p>

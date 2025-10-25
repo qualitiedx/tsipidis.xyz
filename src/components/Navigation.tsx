@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
+import Logo from './Logo';
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -55,10 +56,11 @@ export default function Navigation() {
             {/* Logo */}
             <motion.button
               onClick={() => scrollToSection('about')}
-              className="text-2xl md:text-3xl font-black tracking-tighter uppercase cursor-pointer"
+              className="flex items-center gap-3 text-2xl md:text-3xl font-black tracking-tighter uppercase cursor-pointer"
               whileTap={{ scale: 0.95 }}
             >
-              PORTFOLIO
+              <Logo />
+              TSIPIDIS
             </motion.button>
 
             {/* Desktop Navigation */}
