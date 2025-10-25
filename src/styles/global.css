@@ -1,68 +1,96 @@
 @import "tailwindcss";
 
-/* Premium Typography */
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+/* Brutalist Theme System */
+:root {
+  /* Dark theme (default) */
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #1a1a1a;
+  --bg-gradient: linear-gradient(180deg, #000000 0%, #050505 50%, #000000 100%);
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --border-primary: #ffffff;
+  --border-secondary: #404040;
+  --accent-primary: #ffffff;
+  --accent-secondary: #000000;
 }
 
-/* Heading Styles - Tight tracking for impact */
+html.light {
+  /* Light theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #e5e5e5;
+  --bg-gradient: linear-gradient(180deg, #ffffff 0%, #fafafa 50%, #ffffff 100%);
+  --text-primary: #000000;
+  --text-secondary: #525252;
+  --border-primary: #000000;
+  --border-secondary: #d4d4d4;
+  --accent-primary: #000000;
+  --accent-secondary: #ffffff;
+}
+
+/* Brutalist Typography - Space Grotesk (Right Grotesk alternative) */
+body {
+  font-family: 'Space Grotesk', 'Right Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Brutalist Headings - BOLD and UNAPOLOGETIC */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  letter-spacing: -0.02em;
+  font-family: 'Space Grotesk', 'Right Grotesk', sans-serif;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-size: clamp(3rem, 12vw, 10rem);
 }
 
 h2 {
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-size: clamp(2rem, 8vw, 6rem);
 }
 
-/* Body text - optimal readability */
+h3 {
+  font-size: clamp(1.5rem, 5vw, 4rem);
+}
+
+/* Body text */
 p {
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   letter-spacing: -0.01em;
 }
 
-/* Bold text */
-strong, b {
-  font-weight: 600;
+/* Brutalist borders and boxes */
+.brutal-border {
+  border: 4px solid var(--border-primary);
 }
 
-/* Fine-tuned font weights for hierarchy */
-.font-light {
-  font-weight: 300;
+.brutal-border-thin {
+  border: 2px solid var(--border-primary);
 }
 
-.font-normal {
-  font-weight: 400;
+.brutal-shadow {
+  box-shadow: 8px 8px 0 var(--border-primary);
 }
 
-.font-medium {
-  font-weight: 500;
+.brutal-shadow-lg {
+  box-shadow: 12px 12px 0 var(--border-primary);
 }
 
-.font-semibold {
-  font-weight: 600;
+/* Hover states */
+.brutal-hover:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0 var(--border-primary);
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
-.font-extrabold {
-  font-weight: 800;
-}
-
-.font-black {
-  font-weight: 900;
+/* Transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }

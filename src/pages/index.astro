@@ -1,11 +1,6 @@
 ---
 import '../styles/global.css';
-import Navigation from '../components/Navigation';
-import Hero from '../components/Hero';
-import Experience from '../components/sections/Experience';
-import Projects from '../components/sections/Projects';
-import Approach from '../components/sections/Approach';
-import Contact from '../components/sections/Contact';
+import App from '../components/App';
 ---
 
 <html lang="en">
@@ -20,26 +15,10 @@ import Contact from '../components/sections/Contact';
 		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	</head>
-	<body class="bg-slate-900 text-white antialiased">
-		<!-- Navigation -->
-		<Navigation client:load />
-
-		<!-- Hero Section -->
-		<Hero client:load />
-
-		<!-- Experience Section -->
-		<Experience client:load />
-
-		<!-- Projects Section -->
-		<Projects client:load />
-
-		<!-- Approach Section -->
-		<Approach client:load />
-
-		<!-- Contact Section -->
-		<Contact client:load />
+	<body class="antialiased">
+		<App client:only="react" />
 
 		<!-- Smooth Scroll -->
 		<style is:global>
@@ -49,20 +28,19 @@ import Contact from '../components/sections/Contact';
 
 			/* Custom scrollbar */
 			::-webkit-scrollbar {
-				width: 10px;
+				width: 12px;
 			}
 
 			::-webkit-scrollbar-track {
-				background: #0f172a;
+				background: var(--bg-primary);
 			}
 
 			::-webkit-scrollbar-thumb {
-				background: linear-gradient(to bottom, #a855f7, #ec4899);
-				border-radius: 5px;
+				background: var(--border-primary);
 			}
 
 			::-webkit-scrollbar-thumb:hover {
-				background: linear-gradient(to bottom, #9333ea, #db2777);
+				background: var(--text-secondary);
 			}
 		</style>
 	</body>
