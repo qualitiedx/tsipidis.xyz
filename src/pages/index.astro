@@ -1,5 +1,6 @@
 ---
-
+import '../styles/global.css';
+import TestCard from '../components/TestCard';
 ---
 
 <html lang="en">
@@ -8,9 +9,43 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>tsipidis.xyz - Test Page</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen text-white">
+		<div class="container mx-auto px-4 py-16">
+			<h1 class="text-5xl font-bold mb-8 text-center bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+				Welcome to tsipidis.xyz
+			</h1>
+
+			<div class="max-w-4xl mx-auto space-y-8">
+				<p class="text-lg text-gray-300 leading-relaxed">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>
+
+				<TestCard client:load />
+
+				<div class="grid md:grid-cols-3 gap-6 mt-12">
+					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+						<h3 class="text-xl font-semibold mb-3">Design</h3>
+						<p class="text-gray-300">
+							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+						</p>
+					</div>
+					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+						<h3 class="text-xl font-semibold mb-3">Development</h3>
+						<p class="text-gray-300">
+							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+						</p>
+					</div>
+					<div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+						<h3 class="text-xl font-semibold mb-3">Strategy</h3>
+						<p class="text-gray-300">
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
