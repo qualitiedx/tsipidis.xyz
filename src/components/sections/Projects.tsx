@@ -122,7 +122,7 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
               className="rounded-lg p-8 shadow-lg cursor-pointer"
-              style={{ backgroundColor: '#B2F2BB' }}
+              style={{ backgroundColor: '#BFDBFE' }}
             >
               <div className="mb-6 flex justify-center">
                 <img
@@ -139,7 +139,7 @@ export default function Projects() {
               </h3>
               <p
                 className="text-sm font-bold uppercase mb-4"
-                style={{ color: '#2F9E44' }}
+                style={{ color: '#1E40AF' }}
               >
                 General Manager
               </p>
@@ -155,7 +155,7 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
               className="rounded-lg p-8 shadow-lg cursor-pointer"
-              style={{ backgroundColor: '#E0BBE4' }}
+              style={{ backgroundColor: '#FFB4C9' }}
             >
               <div className="mb-6 flex justify-center">
                 <img
@@ -172,7 +172,7 @@ export default function Projects() {
               </h3>
               <p
                 className="text-sm font-bold uppercase mb-4"
-                style={{ color: '#9C36B5' }}
+                style={{ color: '#BE185D' }}
               >
                 Product Manager
               </p>
@@ -188,7 +188,7 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
               className="rounded-lg p-8 shadow-lg cursor-pointer"
-              style={{ backgroundColor: '#FFB6D9' }}
+              style={{ backgroundColor: '#FFBB9C' }}
             >
               <div className="mb-6 flex justify-center">
                 <svg className="w-[40%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 53.997" style={{ fill: '#2D2D2D' }}>
@@ -216,7 +216,7 @@ export default function Projects() {
               </h3>
               <p
                 className="text-sm font-bold uppercase mb-4"
-                style={{ color: '#C2255C' }}
+                style={{ color: '#C2410C' }}
               >
                 General Manager
               </p>
