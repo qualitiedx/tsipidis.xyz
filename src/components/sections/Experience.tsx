@@ -44,314 +44,242 @@ export default function Experience() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {/* Research */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: -1 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="overflow-hidden rounded-xl"
+              className="rounded-lg p-8 shadow-lg"
+              style={{ backgroundColor: '#FFF59D' }}
             >
-              {/* Cover Image */}
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center">
-                <img
-                  src="/bg-1.png"
-                  alt="Research"
-                  className="absolute inset-0 w-full h-full object-cover blur-sm"
-                />
-                <div className="relative w-16 h-16 rounded-full bg-white flex items-center justify-center" style={{ color: 'var(--text-primary)' }}>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
                   <Search size={32} />
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <h3
-                  className="text-3xl md:text-4xl font-black uppercase mb-6"
-                  style={{ color: 'var(--text-primary)' }}
+                  className="text-3xl md:text-4xl font-black uppercase"
+                  style={{ color: '#2D2D2D' }}
                 >
                   Research
                 </h3>
-                <ul className="space-y-2 reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  <li>Continuous Discovery Practices</li>
-                  <li>Customer Development & Interviews</li>
-                  <li>Opportunity Assessment</li>
-                  <li>Evidence-Based Decision Making</li>
-                  <li>Product Analytics & Metrics</li>
-                  <li>Assumption Testing</li>
-                </ul>
               </div>
+              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
+                <li>Continuous Discovery Practices</li>
+                <li>Customer Development & Interviews</li>
+                <li>Opportunity Assessment</li>
+                <li>Evidence-Based Decision Making</li>
+                <li>Product Analytics & Metrics</li>
+                <li>Assumption Testing</li>
+              </ul>
             </motion.div>
 
             {/* Strategy */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: 1 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="overflow-hidden rounded-xl"
+              className="rounded-lg p-8 shadow-lg"
+              style={{ backgroundColor: '#FFB6D9' }}
             >
-              {/* Cover Image */}
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center">
-                <img
-                  src="/bg-2.png"
-                  alt="Strategy"
-                  className="absolute inset-0 w-full h-full object-cover blur-sm"
-                />
-                <div className="relative w-16 h-16 rounded-full bg-white flex items-center justify-center" style={{ color: 'var(--text-primary)' }}>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
                   <Target size={32} />
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <h3
-                  className="text-3xl md:text-4xl font-black uppercase mb-6"
-                  style={{ color: 'var(--text-primary)' }}
+                  className="text-3xl md:text-4xl font-black uppercase"
+                  style={{ color: '#2D2D2D' }}
                 >
                   Strategy
                 </h3>
-                <ul className="space-y-2 reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  <li>Product Vision & Strategy</li>
-                  <li>Outcome-Driven Planning</li>
-                  <li>Product/Market Fit</li>
-                  <li>Risk Assessment (Value/Usability/Feasibility/Viability)</li>
-                  <li>Product Positioning</li>
-                  <li>North Star Metrics</li>
-                </ul>
               </div>
+              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
+                <li>Product Vision & Strategy</li>
+                <li>Outcome-Driven Planning</li>
+                <li>Product/Market Fit</li>
+                <li>Risk Assessment (Value/Usability/Feasibility/Viability)</li>
+                <li>Product Positioning</li>
+                <li>North Star Metrics</li>
+              </ul>
             </motion.div>
 
             {/* Product & Design */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: -2 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 0.5 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="overflow-hidden rounded-xl"
+              className="rounded-lg p-8 shadow-lg"
+              style={{ backgroundColor: '#A5D8FF' }}
             >
-              {/* Cover Image */}
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center">
-                <img
-                  src="/bg-3.png"
-                  alt="Design"
-                  className="absolute inset-0 w-full h-full object-cover blur-sm"
-                />
-                <div className="relative w-16 h-16 rounded-full bg-white flex items-center justify-center" style={{ color: 'var(--text-primary)' }}>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
                   <Palette size={32} />
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <h3
-                  className="text-3xl md:text-4xl font-black uppercase mb-6"
-                  style={{ color: 'var(--text-primary)' }}
+                  className="text-3xl md:text-4xl font-black uppercase"
+                  style={{ color: '#2D2D2D' }}
                 >
                   Design
                 </h3>
-                <ul className="space-y-2 reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  <li>Product Trio Leadership (PM/Design/Eng)</li>
-                  <li>Rapid Prototyping & Testing</li>
-                  <li>Design Thinking & Sprints</li>
-                  <li>User Experience Strategy</li>
-                  <li>Product Sense & Intuition</li>
-                  <li>Customer Journey Mapping</li>
-                </ul>
               </div>
+              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
+                <li>Product Trio Leadership (PM/Design/Eng)</li>
+                <li>Rapid Prototyping & Testing</li>
+                <li>Design Thinking & Sprints</li>
+                <li>User Experience Strategy</li>
+                <li>Product Sense & Intuition</li>
+                <li>Customer Journey Mapping</li>
+              </ul>
             </motion.div>
 
             {/* Building & Execution */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: 2 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -0.5 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="overflow-hidden rounded-xl"
+              className="rounded-lg p-8 shadow-lg"
+              style={{ backgroundColor: '#B2F2BB' }}
             >
-              {/* Cover Image */}
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center">
-                <img
-                  src="/bg-4.png"
-                  alt="Building"
-                  className="absolute inset-0 w-full h-full object-cover blur-sm"
-                />
-                <div className="relative w-16 h-16 rounded-full bg-white flex items-center justify-center" style={{ color: 'var(--text-primary)' }}>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
                   <Hammer size={32} />
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <h3
-                  className="text-3xl md:text-4xl font-black uppercase mb-6"
-                  style={{ color: 'var(--text-primary)' }}
+                  className="text-3xl md:text-4xl font-black uppercase"
+                  style={{ color: '#2D2D2D' }}
                 >
                   Building
                 </h3>
-                <ul className="space-y-2 reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  <li>Empowered Team Building</li>
-                  <li>Technical Credibility & Fluency</li>
-                  <li>Product Operations Excellence</li>
-                  <li>0-to-1 & Scaling Products</li>
-                  <li>Continuous Delivery</li>
-                  <li>Cross-Functional Collaboration</li>
-                </ul>
               </div>
+              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
+                <li>Empowered Team Building</li>
+                <li>Technical Credibility & Fluency</li>
+                <li>Product Operations Excellence</li>
+                <li>0-to-1 & Scaling Products</li>
+                <li>Continuous Delivery</li>
+                <li>Cross-Functional Collaboration</li>
+              </ul>
             </motion.div>
 
             {/* AI & ML - NEW for 2025 */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: -1.5 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
-              className="overflow-hidden rounded-xl"
+              className="rounded-lg p-8 shadow-lg"
+              style={{ backgroundColor: '#E0BBE4' }}
             >
-              {/* Cover Image */}
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center">
-                <img
-                  src="/bg-5.png"
-                  alt="AI & ML"
-                  className="absolute inset-0 w-full h-full object-cover blur-sm"
-                />
-                <div className="relative w-16 h-16 rounded-full bg-white flex items-center justify-center" style={{ color: 'var(--text-primary)' }}>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
                   <Brain size={32} />
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <h3
-                  className="text-3xl md:text-4xl font-black uppercase mb-6"
-                  style={{ color: 'var(--text-primary)' }}
+                  className="text-3xl md:text-4xl font-black uppercase"
+                  style={{ color: '#2D2D2D' }}
                 >
                   AI & ML
                 </h3>
-                <ul className="space-y-2 reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  <li>AI/ML Product Strategy</li>
-                  <li>Model Evaluation & Metrics</li>
-                  <li>Data Strategy & Quality</li>
-                  <li>Responsible AI & Ethics</li>
-                  <li>Agentic Systems Design</li>
-                  <li>Probabilistic System Design</li>
-                </ul>
               </div>
+              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
+                <li>AI/ML Product Strategy</li>
+                <li>Model Evaluation & Metrics</li>
+                <li>Data Strategy & Quality</li>
+                <li>Responsible AI & Ethics</li>
+                <li>Agentic Systems Design</li>
+                <li>Probabilistic System Design</li>
+              </ul>
             </motion.div>
 
             {/* Experimentation & Growth */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: 1.5 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.7 }}
-              className="overflow-hidden rounded-xl"
+              className="rounded-lg p-8 shadow-lg"
+              style={{ backgroundColor: '#FFD8A8' }}
             >
-              {/* Cover Image */}
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center">
-                <img
-                  src="/bg-6.png"
-                  alt="Experimentation"
-                  className="absolute inset-0 w-full h-full object-cover blur-sm"
-                />
-                <div className="relative w-16 h-16 rounded-full bg-white flex items-center justify-center" style={{ color: 'var(--text-primary)' }}>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
                   <Zap size={32} />
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <h3
-                  className="text-3xl md:text-4xl font-black uppercase mb-6"
-                  style={{ color: 'var(--text-primary)' }}
+                  className="text-3xl md:text-4xl font-black uppercase"
+                  style={{ color: '#2D2D2D' }}
                 >
                   Experimentation
                 </h3>
-                <ul className="space-y-2 reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  <li>A/B Testing & Multivariate Testing</li>
-                  <li>Hypothesis-Driven Development</li>
-                  <li>Rapid Experimentation Frameworks</li>
-                  <li>Feature Flagging & Rollouts</li>
-                  <li>Learning Velocity</li>
-                  <li>Conversion Rate Optimization</li>
-                </ul>
               </div>
+              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
+                <li>A/B Testing & Multivariate Testing</li>
+                <li>Hypothesis-Driven Development</li>
+                <li>Rapid Experimentation Frameworks</li>
+                <li>Feature Flagging & Rollouts</li>
+                <li>Learning Velocity</li>
+                <li>Conversion Rate Optimization</li>
+              </ul>
             </motion.div>
 
             {/* Leadership & Influence */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: -2 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 0.5 }}
               viewport={{ once: true }}
               transition={{ delay: 0.8 }}
-              className="overflow-hidden rounded-xl"
+              className="rounded-lg p-8 shadow-lg"
+              style={{ backgroundColor: '#FFCCCB' }}
             >
-              {/* Cover Image */}
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center">
-                <img
-                  src="/bg-7.png"
-                  alt="Leadership"
-                  className="absolute inset-0 w-full h-full object-cover blur-sm"
-                />
-                <div className="relative w-16 h-16 rounded-full bg-white flex items-center justify-center" style={{ color: 'var(--text-primary)' }}>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
                   <Users size={32} />
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <h3
-                  className="text-3xl md:text-4xl font-black uppercase mb-6"
-                  style={{ color: 'var(--text-primary)' }}
+                  className="text-3xl md:text-4xl font-black uppercase"
+                  style={{ color: '#2D2D2D' }}
                 >
                   Leadership
                 </h3>
-                <ul className="space-y-2 reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  <li>Product Evangelism</li>
-                  <li>Coaching & Mentoring</li>
-                  <li>Stakeholder Influence</li>
-                  <li>Team Empowerment</li>
-                  <li>Executive Communication</li>
-                  <li>Conflict Resolution</li>
-                </ul>
               </div>
+              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
+                <li>Product Evangelism</li>
+                <li>Coaching & Mentoring</li>
+                <li>Stakeholder Influence</li>
+                <li>Team Empowerment</li>
+                <li>Executive Communication</li>
+                <li>Conflict Resolution</li>
+              </ul>
             </motion.div>
 
             {/* Business & Growth */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: 1 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.9 }}
-              className="overflow-hidden rounded-xl"
+              className="rounded-lg p-8 shadow-lg"
+              style={{ backgroundColor: '#C1F0C1' }}
             >
-              {/* Cover Image */}
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center">
-                <img
-                  src="/bg-1.png"
-                  alt="Growth"
-                  className="absolute inset-0 w-full h-full object-cover blur-sm"
-                />
-                <div className="relative w-16 h-16 rounded-full bg-white flex items-center justify-center" style={{ color: 'var(--text-primary)' }}>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
                   <TrendingUp size={32} />
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <h3
-                  className="text-3xl md:text-4xl font-black uppercase mb-6"
-                  style={{ color: 'var(--text-primary)' }}
+                  className="text-3xl md:text-4xl font-black uppercase"
+                  style={{ color: '#2D2D2D' }}
                 >
                   Growth
                 </h3>
-                <ul className="space-y-2 reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  <li>Product-Led Growth (PLG)</li>
-                  <li>Business Model Canvas</li>
-                  <li>Unit Economics & P&L</li>
-                  <li>Monetization Strategy</li>
-                  <li>Retention & Engagement</li>
-                  <li>Market Expansion</li>
-                </ul>
               </div>
+              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
+                <li>Product-Led Growth (PLG)</li>
+                <li>Business Model Canvas</li>
+                <li>Unit Economics & P&L</li>
+                <li>Monetization Strategy</li>
+                <li>Retention & Engagement</li>
+                <li>Market Expansion</li>
+              </ul>
             </motion.div>
           </div>
         </motion.div>

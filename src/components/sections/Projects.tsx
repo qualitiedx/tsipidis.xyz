@@ -49,157 +49,149 @@ export default function Projects() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {/* Pfizer */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: 1 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -0.5 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="border-2 overflow-hidden cursor-pointer rounded-xl"
-              style={{ borderColor: 'var(--border-primary)' }}
+              className="rounded-lg p-8 shadow-lg cursor-pointer"
+              style={{ backgroundColor: '#A5D8FF' }}
             >
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+              <div className="mb-6 flex justify-center">
                 <img
                   src="https://www.pfizer.com/profiles/pfecpfizercomus_profile/themes/pfecpfizercomus/public/assets/images/logo-blue.svg"
                   alt="Pfizer Logo"
-                  className="w-[48%] h-auto object-contain p-8"
+                  className="w-[40%] h-auto object-contain"
                 />
               </div>
-              <div className="p-8">
-                <h3
-                  className="text-2xl md:text-3xl font-black uppercase mb-2"
-                  style={{ color: 'var(--text-primary)' }}
-                >
-                  PFIZER
-                </h3>
-                <p
-                  className="text-sm font-bold uppercase mb-4"
-                  style={{ color: 'var(--accent-primary)' }}
-                >
-                  Digital Product Manager
-                </p>
-                <p className="reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  PfizerPro global platform rolled-out to 145+ markets. $80M+ project.
-                </p>
-              </div>
+              <h3
+                className="text-2xl md:text-3xl font-black uppercase mb-2"
+                style={{ color: '#2D2D2D' }}
+              >
+                PFIZER
+              </h3>
+              <p
+                className="text-sm font-bold uppercase mb-4"
+                style={{ color: '#1864AB' }}
+              >
+                Digital Product Manager
+              </p>
+              <p className="reading-text-small" style={{ color: '#2D2D2D' }}>
+                PfizerPro global platform rolled-out to 145+ markets. $80M+ project.
+              </p>
             </motion.div>
 
             {/* AppTVplus */}
             <motion.div
               layoutId="apptvplus"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: -1 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 0.5 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="border-2 overflow-hidden cursor-pointer rounded-xl"
-              style={{ borderColor: 'var(--border-primary)' }}
+              className="rounded-lg p-8 shadow-lg cursor-pointer"
+              style={{ backgroundColor: '#FFD8A8' }}
               onClick={() => setSelectedProject('apptvplus')}
             >
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+              <div className="mb-6 flex justify-center">
                 <img
                   src="/logos/apptvsvg.svg"
                   alt="AppTVplus Logo"
-                  className="w-[48%] h-auto object-contain p-8"
+                  className="w-[40%] h-auto object-contain"
                 />
               </div>
-              <div className="p-8">
-                <h3
-                  className="text-2xl md:text-3xl font-black uppercase mb-2"
-                  style={{ color: 'var(--text-primary)' }}
-                >
-                  APPTVPLUS
-                </h3>
-                <p
-                  className="text-sm font-bold uppercase mb-4"
-                  style={{ color: 'var(--accent-primary)' }}
-                >
-                  Founder
-                </p>
-                <p className="reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  IPTV/Live TV streaming platform delivering content to thousands of users.
-                </p>
-              </div>
+              <h3
+                className="text-2xl md:text-3xl font-black uppercase mb-2"
+                style={{ color: '#2D2D2D' }}
+              >
+                APPTVPLUS
+              </h3>
+              <p
+                className="text-sm font-bold uppercase mb-4"
+                style={{ color: '#D9480F' }}
+              >
+                Founder
+              </p>
+              <p className="reading-text-small" style={{ color: '#2D2D2D' }}>
+                IPTV/Live TV streaming platform delivering content to thousands of users.
+              </p>
             </motion.div>
 
             {/* Lavva.io */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: 2 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="border-2 overflow-hidden cursor-pointer rounded-xl"
-              style={{ borderColor: 'var(--border-primary)' }}
+              className="rounded-lg p-8 shadow-lg cursor-pointer"
+              style={{ backgroundColor: '#B2F2BB' }}
             >
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+              <div className="mb-6 flex justify-center">
                 <img
                   src="/logos/logo-lavva-io.png"
                   alt="Lavva.io Logo"
-                  className="w-[48%] h-auto object-contain p-8"
+                  className="w-[40%] h-auto object-contain"
                 />
               </div>
-              <div className="p-8">
-                <h3
-                  className="text-2xl md:text-3xl font-black uppercase mb-2"
-                  style={{ color: 'var(--text-primary)' }}
-                >
-                  LAVVA.IO
-                </h3>
-                <p
-                  className="text-sm font-bold uppercase mb-4"
-                  style={{ color: 'var(--accent-primary)' }}
-                >
-                  General Manager
-                </p>
-                <p className="reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  Live data streaming technologies on the cloud, offered as managed services.
-                </p>
-              </div>
+              <h3
+                className="text-2xl md:text-3xl font-black uppercase mb-2"
+                style={{ color: '#2D2D2D' }}
+              >
+                LAVVA.IO
+              </h3>
+              <p
+                className="text-sm font-bold uppercase mb-4"
+                style={{ color: '#2F9E44' }}
+              >
+                General Manager
+              </p>
+              <p className="reading-text-small" style={{ color: '#2D2D2D' }}>
+                Live data streaming technologies on the cloud, offered as managed services.
+              </p>
             </motion.div>
 
             {/* Interworks.Cloud */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: -1.5 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="border-2 overflow-hidden cursor-pointer rounded-xl"
-              style={{ borderColor: 'var(--border-primary)' }}
+              className="rounded-lg p-8 shadow-lg cursor-pointer"
+              style={{ backgroundColor: '#E0BBE4' }}
             >
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+              <div className="mb-6 flex justify-center">
                 <img
                   src={theme === 'dark' ? '/logos/white_transparen.png' : '/logos/blue_transparent.png'}
                   alt="Infiterra (formerly Interworks.Cloud) Logo"
-                  className="w-[60%] h-auto object-contain p-8"
+                  className="w-[50%] h-auto object-contain"
                 />
               </div>
-              <div className="p-8">
-                <h3
-                  className="text-2xl md:text-3xl font-black uppercase mb-2"
-                  style={{ color: 'var(--text-primary)' }}
-                >
-                  INFITERRA
-                </h3>
-                <p
-                  className="text-sm font-bold uppercase mb-4"
-                  style={{ color: 'var(--accent-primary)' }}
-                >
-                  Product Manager
-                </p>
-                <p className="reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  B2B Cloud Brokerage Platform. 100+ customers, $120M yearly transactions, +120% revenue growth.
-                </p>
-              </div>
+              <h3
+                className="text-2xl md:text-3xl font-black uppercase mb-2"
+                style={{ color: '#2D2D2D' }}
+              >
+                INFITERRA
+              </h3>
+              <p
+                className="text-sm font-bold uppercase mb-4"
+                style={{ color: '#9C36B5' }}
+              >
+                Product Manager
+              </p>
+              <p className="reading-text-small" style={{ color: '#2D2D2D' }}>
+                B2B Cloud Brokerage Platform. 100+ customers, $120M yearly transactions, +120% revenue growth.
+              </p>
             </motion.div>
 
             {/* Urnovl.co */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: 1.5 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -0.5 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="border-2 overflow-hidden cursor-pointer rounded-xl"
-              style={{ borderColor: 'var(--border-primary)' }}
+              className="rounded-lg p-8 shadow-lg cursor-pointer"
+              style={{ backgroundColor: '#FFB6D9' }}
             >
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-                <svg className="w-[48%] h-auto p-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 53.997" style={{ fill: 'var(--text-primary)' }}>
+              <div className="mb-6 flex justify-center">
+                <svg className="w-[40%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 53.997" style={{ fill: '#2D2D2D' }}>
                   <path d="M35.252,15.875v36.373h-9.375v-2.922C23.025,51.873,19.576,53,16.053,53c-5.025,0-9.527-2.326-12.377-5.852
                        C1.352,44.299,0,40.55,0,35.15V15.875h9.752v19.648c0,3.302,0.676,4.951,1.799,6.226c1.5,1.651,3.6,2.253,5.475,2.253
                        c4.125,0,7.125-2.779,8.475-4.502V15.875H35.252z"/>
@@ -216,58 +208,54 @@ export default function Projects() {
                   <path d="M179.85,0h9.75v52.248h-9.75V0z"/>
                 </svg>
               </div>
-              <div className="p-8">
-                <h3
-                  className="text-2xl md:text-3xl font-black uppercase mb-2"
-                  style={{ color: 'var(--text-primary)' }}
-                >
-                  URNOVL.CO
-                </h3>
-                <p
-                  className="text-sm font-bold uppercase mb-4"
-                  style={{ color: 'var(--accent-primary)' }}
-                >
-                  General Manager
-                </p>
-                <p className="reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  Social network for readers, writers & publishers. 10,000+ stories.
-                </p>
-              </div>
+              <h3
+                className="text-2xl md:text-3xl font-black uppercase mb-2"
+                style={{ color: '#2D2D2D' }}
+              >
+                URNOVL.CO
+              </h3>
+              <p
+                className="text-sm font-bold uppercase mb-4"
+                style={{ color: '#C2255C' }}
+              >
+                General Manager
+              </p>
+              <p className="reading-text-small" style={{ color: '#2D2D2D' }}>
+                Social network for readers, writers & publishers. 10,000+ stories.
+              </p>
             </motion.div>
 
             {/* Spotware Systems */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, rotate: -2 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 0.5 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
-              className="border-2 overflow-hidden cursor-pointer rounded-xl"
-              style={{ borderColor: 'var(--border-primary)' }}
+              className="rounded-lg p-8 shadow-lg cursor-pointer"
+              style={{ backgroundColor: '#FFF59D' }}
             >
-              <div className="relative w-full h-64 overflow-hidden flex items-center justify-center" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+              <div className="mb-6 flex justify-center">
                 <img
                   src={theme === 'dark' ? '/logos/Spotware logo light + safespace.svg' : '/logos/Spotware logo dark + safespace.svg'}
                   alt="Spotware Systems Logo"
-                  className="w-[60%] h-auto object-contain p-8"
+                  className="w-[50%] h-auto object-contain"
                 />
               </div>
-              <div className="p-8">
-                <h3
-                  className="text-2xl md:text-3xl font-black uppercase mb-2"
-                  style={{ color: 'var(--text-primary)' }}
-                >
-                  SPOTWARE SYSTEMS
-                </h3>
-                <p
-                  className="text-sm font-bold uppercase mb-4"
-                  style={{ color: 'var(--accent-primary)' }}
-                >
-                  Product Manager
-                </p>
-                <p className="reading-text-small" style={{ color: 'var(--text-secondary)' }}>
-                  Trading B2B Platform for Brokerage Firms. $12M raised, $10M+ revenues.
-                </p>
-              </div>
+              <h3
+                className="text-2xl md:text-3xl font-black uppercase mb-2"
+                style={{ color: '#2D2D2D' }}
+              >
+                SPOTWARE SYSTEMS
+              </h3>
+              <p
+                className="text-sm font-bold uppercase mb-4"
+                style={{ color: '#F08C00' }}
+              >
+                Product Manager
+              </p>
+              <p className="reading-text-small" style={{ color: '#2D2D2D' }}>
+                Trading B2B Platform for Brokerage Firms. $12M raised, $10M+ revenues.
+              </p>
             </motion.div>
           </div>
         </motion.div>
