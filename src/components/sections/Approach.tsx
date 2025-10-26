@@ -4,7 +4,7 @@ export default function Approach() {
   return (
     <section
       id="approach"
-      className="min-h-screen py-20 border-t-4"
+      className="min-h-screen py-20 border-t-2"
       style={{
         backgroundColor: 'var(--bg-primary)',
         borderColor: 'var(--border-primary)'

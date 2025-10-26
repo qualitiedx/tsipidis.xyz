@@ -49,7 +49,7 @@ export default function Navigation() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className="fixed top-0 left-0 right-0 z-50 border-b-4 border-[var(--border-primary)] bg-[var(--bg-primary)]"
+        className="fixed top-0 left-0 right-0 z-50 border-b-2 border-[var(--border-primary)] bg-[var(--bg-primary)]"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
@@ -69,10 +69,10 @@ export default function Navigation() {
                 <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-2 text-sm font-bold tracking-tight uppercase transition-all cursor-pointer ${
+                  className={`px-4 py-2 text-sm font-bold tracking-tight uppercase transition-all cursor-pointer rounded-lg border border-transparent ${
                     activeSection === item.id
-                      ? 'bg-[var(--accent-primary)] text-[var(--accent-secondary)]'
-                      : 'hover:bg-[var(--bg-tertiary)]'
+                      ? 'bg-[var(--accent-primary)] text-[var(--accent-secondary)] border-[var(--border-primary)]'
+                      : 'hover:bg-[var(--bg-tertiary)] hover:border-[var(--border-primary)]'
                   }`}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -83,7 +83,7 @@ export default function Navigation() {
               {/* Theme Toggle */}
               <motion.button
                 onClick={toggleTheme}
-                className="ml-4 p-3 border-2 border-[var(--border-primary)] bg-[var(--bg-secondary)] hover:bg-[var(--bg-tertiary)] cursor-pointer"
+                className="ml-4 p-3 border border-[var(--border-primary)] bg-[var(--bg-secondary)] hover:bg-[var(--bg-tertiary)] cursor-pointer rounded-lg"
                 whileTap={{ scale: 0.95 }}
                 aria-label="Toggle theme"
               >
@@ -95,7 +95,7 @@ export default function Navigation() {
             <div className="md:hidden flex items-center gap-2">
               <motion.button
                 onClick={toggleTheme}
-                className="p-2 border-2 border-[var(--border-primary)] cursor-pointer"
+                className="p-2 border border-[var(--border-primary)] cursor-pointer rounded-lg"
                 whileTap={{ scale: 0.95 }}
                 aria-label="Toggle theme"
               >
@@ -104,7 +104,7 @@ export default function Navigation() {
 
               <motion.button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 border-2 border-[var(--border-primary)] cursor-pointer"
+                className="p-2 border border-[var(--border-primary)] cursor-pointer rounded-lg"
                 whileTap={{ scale: 0.95 }}
               >
                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -120,14 +120,14 @@ export default function Navigation() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="fixed top-20 left-0 right-0 z-40 bg-[var(--bg-primary)] border-b-4 border-[var(--border-primary)] md:hidden"
+          className="fixed top-20 left-0 right-0 z-40 bg-[var(--bg-primary)] border-b-2 border-[var(--border-primary)] md:hidden"
         >
           <div className="container mx-auto px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`w-full text-left px-4 py-3 text-lg font-bold uppercase border-2 border-[var(--border-primary)] cursor-pointer ${
+                className={`w-full text-left px-4 py-3 text-lg font-bold uppercase border border-[var(--border-primary)] cursor-pointer rounded-lg ${
                   activeSection === item.id
                     ? 'bg-[var(--accent-primary)] text-[var(--accent-secondary)]'
                     : 'bg-[var(--bg-secondary)]'

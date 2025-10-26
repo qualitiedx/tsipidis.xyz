@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen py-20 border-t-4 flex items-center"
+      className="min-h-screen py-20 border-t-2 flex items-center"
       style={{
         background: 'var(--bg-gradient)',
         borderColor: 'var(--border-primary)'
@@ -41,7 +41,7 @@ export default function Contact() {
           {/* CTA Button */}
           <motion.a
             href="mailto:your.email@example.com"
-            className="inline-flex items-center gap-3 px-8 py-4 border-4 uppercase font-bold tracking-tight mb-16 cursor-pointer hover:opacity-80 transition-opacity"
+            className="inline-flex items-center gap-3 px-8 py-4 border-2 uppercase font-bold tracking-tight mb-16 cursor-pointer hover:opacity-80 transition-opacity rounded-xl"
             style={{
               backgroundColor: 'var(--accent-primary)',
               color: 'var(--accent-secondary)',
@@ -65,7 +65,7 @@ export default function Contact() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 border-2 uppercase text-xs font-bold tracking-wide cursor-pointer transition-all"
+                className="p-4 border uppercase text-xs font-bold tracking-wide cursor-pointer transition-all rounded-lg"
                 style={{
                   backgroundColor: 'var(--bg-primary)',
                   color: 'var(--text-primary)',

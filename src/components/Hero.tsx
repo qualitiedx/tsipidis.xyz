@@ -6,11 +6,14 @@ import HeroWireframe from './HeroWireframe';
 
 export default function Hero() {
   const roles = [
-    'Product Leader',
-    'Strategist',
-    'Builder',
-    'Innovator',
-    'Problem Solver'
+    'PRODUCT LEADER',
+    'STRATEGIST',
+    'BUILDER',
+    'INNOVATOR',
+    'GROWTH DRIVER',
+    'USER ADVOCATE',
+    'EXECUTOR',
+    'AI SPECIALIST'
   ];
 
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -82,32 +85,21 @@ export default function Hero() {
         >
           {/* Main Title with Rotating Role */}
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-8 uppercase tracking-tighter leading-none">
-            <motion.div
+            <div
               className="mb-2"
               style={{
                 color: 'var(--text-primary)',
-                transformOrigin: 'top',
                 textShadow: '3px 3px 0 var(--bg-primary), -1px -1px 0 var(--bg-primary), 1px -1px 0 var(--bg-primary), -1px 1px 0 var(--bg-primary)'
               }}
-              animate={{
-                x: mousePosition.x * 20,
-                y: mousePosition.y * 20,
-                scaleY: 1.3
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 150,
-                damping: 15
-              }}
             >
-              I'm a
-            </motion.div>
+              PM
+            </div>
             <div className="relative overflow-visible min-h-[1.2em]">
               <motion.div
                 key={currentRoleIndex}
-                initial={{ y: 100, opacity: 0 }}
+                initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -100, opacity: 0 }}
+                exit={{ y: -50, opacity: 0 }}
                 transition={{ duration: 0.5 }}
                 className="absolute left-1/2 -translate-x-1/2"
                 style={{
@@ -146,7 +138,7 @@ export default function Hero() {
           >
             <motion.button
               onClick={() => scrollToSection('projects')}
-              className="px-8 py-4 border-4 uppercase font-bold tracking-tight cursor-pointer hover:opacity-80 transition-opacity"
+              className="px-8 py-4 border-2 uppercase font-bold tracking-tight cursor-pointer hover:opacity-80 transition-opacity rounded-xl"
               style={{
                 backgroundColor: 'var(--accent-primary)',
                 color: 'var(--accent-secondary)',
@@ -158,7 +150,7 @@ export default function Hero() {
             </motion.button>
             <motion.button
               onClick={() => scrollToSection('contact')}
-              className="px-8 py-4 border-4 uppercase font-bold tracking-tight cursor-pointer transition-all"
+              className="px-8 py-4 border-2 uppercase font-bold tracking-tight cursor-pointer transition-all rounded-xl"
               style={{
                 backgroundColor: 'var(--bg-primary)',
                 color: 'var(--text-primary)',
