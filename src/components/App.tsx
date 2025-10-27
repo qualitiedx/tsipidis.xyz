@@ -1,20 +1,34 @@
+import { useState } from 'react';
 import { ThemeProvider } from './ThemeProvider';
 import Navigation from './Navigation';
 import Hero from './Hero';
 import Experience from './sections/Experience';
+import Industries from './sections/Industries';
 import Projects from './sections/Projects';
 import Approach from './sections/Approach';
 import Contact from './sections/Contact';
+import LoadingScreen from './LoadingScreen';
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <ThemeProvider>
-      <Navigation />
-      <Hero />
-      <Experience />
-      <Projects />
-      <Approach />
-      <Contact />
+      {isLoading && (
+        <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
+      )}
+
+      {!isLoading && (
+        <>
+          <Navigation />
+          <Hero />
+          <Experience />
+          <Industries />
+          <Projects />
+          <Approach />
+          <Contact />
+        </>
+      )}
     </ThemeProvider>
   );
 }

@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
 import { Search, Target, Palette, Hammer, Brain, Zap, Users, TrendingUp } from 'lucide-react';
+import StickyCard from '../StickyCard';
+import HoverFollowTooltip from '../HoverFollowTooltip';
 
 export default function Experience() {
   return (
     <section
       id="experience"
-      className="min-h-screen py-20 border-t-2"
+      className="py-20 border-t-2"
       style={{
         backgroundColor: 'var(--bg-primary)',
         borderColor: 'var(--border-primary)'
@@ -43,244 +45,152 @@ export default function Experience() {
           {/* Expertise Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {/* Research */}
-            <motion.div
-              initial={{ opacity: 0, y: 20, rotate: -1 }}
-              whileInView={{ opacity: 1, y: 0, rotate: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="rounded-lg p-8 shadow-lg"
-              style={{ backgroundColor: '#FFF59D' }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
-                  <Search size={32} />
-                </div>
-                <h3
-                  className="text-3xl md:text-4xl font-black uppercase"
-                  style={{ color: '#2D2D2D' }}
-                >
-                  Research
-                </h3>
-              </div>
-              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
-                <li>Continuous Discovery Practices</li>
-                <li>Customer Development & Interviews</li>
-                <li>Opportunity Assessment</li>
-                <li>Evidence-Based Decision Making</li>
-                <li>Product Analytics & Metrics</li>
-                <li>Assumption Testing</li>
-              </ul>
-            </motion.div>
+            <StickyCard
+              backgroundColor="#FFF59D"
+              icon={<Search size={32} />}
+              title="Research"
+              items={[
+                <HoverFollowTooltip
+                  key="continuous-discovery"
+                  text="Continuous Discovery Practices"
+                  tooltipContent="A systematic approach to regularly engaging with customers to discover opportunities, validate assumptions, and inform product decisions throughout the development lifecycle."
+                />,
+                'Customer Development & Interviews',
+                'Opportunity Assessment',
+                'Evidence-Based Decision Making',
+                'Product Analytics & Metrics',
+                'Assumption Testing'
+              ]}
+              initialRotate={-1}
+              finalRotate={1}
+              delay={0.2}
+            />
 
             {/* Strategy */}
-            <motion.div
-              initial={{ opacity: 0, y: 20, rotate: 1 }}
-              whileInView={{ opacity: 1, y: 0, rotate: -1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="rounded-lg p-8 shadow-lg"
-              style={{ backgroundColor: '#FFB6D9' }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
-                  <Target size={32} />
-                </div>
-                <h3
-                  className="text-3xl md:text-4xl font-black uppercase"
-                  style={{ color: '#2D2D2D' }}
-                >
-                  Strategy
-                </h3>
-              </div>
-              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
-                <li>Product Vision & Strategy</li>
-                <li>Outcome-Driven Planning</li>
-                <li>Product/Market Fit</li>
-                <li>Risk Assessment (Value/Usability/Feasibility/Viability)</li>
-                <li>Product Positioning</li>
-                <li>North Star Metrics</li>
-              </ul>
-            </motion.div>
+            <StickyCard
+              backgroundColor="#FFB6D9"
+              icon={<Target size={32} />}
+              title="Strategy"
+              items={[
+                'Product Vision & Strategy',
+                'Outcome-Driven Planning',
+                'Product/Market Fit',
+                'Risk Assessment (Value/Usability/Feasibility/Viability)',
+                'Product Positioning',
+                'North Star Metrics'
+              ]}
+              initialRotate={1}
+              finalRotate={-1}
+              delay={0.3}
+            />
 
             {/* Product & Design */}
-            <motion.div
-              initial={{ opacity: 0, y: 20, rotate: -2 }}
-              whileInView={{ opacity: 1, y: 0, rotate: 0.5 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="rounded-lg p-8 shadow-lg"
-              style={{ backgroundColor: '#A5D8FF' }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
-                  <Palette size={32} />
-                </div>
-                <h3
-                  className="text-3xl md:text-4xl font-black uppercase"
-                  style={{ color: '#2D2D2D' }}
-                >
-                  Design
-                </h3>
-              </div>
-              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
-                <li>Product Trio Leadership (PM/Design/Eng)</li>
-                <li>Rapid Prototyping & Testing</li>
-                <li>Design Thinking & Sprints</li>
-                <li>User Experience Strategy</li>
-                <li>Product Sense & Intuition</li>
-                <li>Customer Journey Mapping</li>
-              </ul>
-            </motion.div>
+            <StickyCard
+              backgroundColor="#A5D8FF"
+              icon={<Palette size={32} />}
+              title="Design"
+              items={[
+                'Product Trio Leadership (PM/Design/Eng)',
+                'Rapid Prototyping & Testing',
+                'Design Thinking & Sprints',
+                'User Experience Strategy',
+                'Product Sense & Intuition',
+                'Customer Journey Mapping'
+              ]}
+              initialRotate={-2}
+              finalRotate={0.5}
+              delay={0.4}
+            />
 
             {/* Building & Execution */}
-            <motion.div
-              initial={{ opacity: 0, y: 20, rotate: 2 }}
-              whileInView={{ opacity: 1, y: 0, rotate: -0.5 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="rounded-lg p-8 shadow-lg"
-              style={{ backgroundColor: '#B2F2BB' }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
-                  <Hammer size={32} />
-                </div>
-                <h3
-                  className="text-3xl md:text-4xl font-black uppercase"
-                  style={{ color: '#2D2D2D' }}
-                >
-                  Building
-                </h3>
-              </div>
-              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
-                <li>Empowered Team Building</li>
-                <li>Technical Credibility & Fluency</li>
-                <li>Product Operations Excellence</li>
-                <li>0-to-1 & Scaling Products</li>
-                <li>Continuous Delivery</li>
-                <li>Cross-Functional Collaboration</li>
-              </ul>
-            </motion.div>
+            <StickyCard
+              backgroundColor="#B2F2BB"
+              icon={<Hammer size={32} />}
+              title="Building"
+              items={[
+                'Empowered Team Building',
+                'Technical Credibility & Fluency',
+                'Product Operations Excellence',
+                '0-to-1 & Scaling Products',
+                'Continuous Delivery',
+                'Cross-Functional Collaboration'
+              ]}
+              initialRotate={2}
+              finalRotate={-0.5}
+              delay={0.5}
+            />
 
             {/* AI & ML - NEW for 2025 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20, rotate: -1.5 }}
-              whileInView={{ opacity: 1, y: 0, rotate: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="rounded-lg p-8 shadow-lg"
-              style={{ backgroundColor: '#E0BBE4' }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
-                  <Brain size={32} />
-                </div>
-                <h3
-                  className="text-3xl md:text-4xl font-black uppercase"
-                  style={{ color: '#2D2D2D' }}
-                >
-                  AI & ML
-                </h3>
-              </div>
-              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
-                <li>AI/ML Product Strategy</li>
-                <li>Model Evaluation & Metrics</li>
-                <li>Data Strategy & Quality</li>
-                <li>Responsible AI & Ethics</li>
-                <li>Agentic Systems Design</li>
-                <li>Probabilistic System Design</li>
-              </ul>
-            </motion.div>
+            <StickyCard
+              backgroundColor="#E0BBE4"
+              icon={<Brain size={32} />}
+              title="AI & ML"
+              items={[
+                'AI/ML Product Strategy',
+                'Model Evaluation & Metrics',
+                'Data Strategy & Quality',
+                'Responsible AI & Ethics',
+                'Agentic Systems Design',
+                'Probabilistic System Design'
+              ]}
+              initialRotate={-1.5}
+              finalRotate={1}
+              delay={0.6}
+            />
 
             {/* Experimentation & Growth */}
-            <motion.div
-              initial={{ opacity: 0, y: 20, rotate: 1.5 }}
-              whileInView={{ opacity: 1, y: 0, rotate: -1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.7 }}
-              className="rounded-lg p-8 shadow-lg"
-              style={{ backgroundColor: '#FFD8A8' }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
-                  <Zap size={32} />
-                </div>
-                <h3
-                  className="text-3xl md:text-4xl font-black uppercase"
-                  style={{ color: '#2D2D2D' }}
-                >
-                  Experimentation
-                </h3>
-              </div>
-              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
-                <li>A/B Testing & Multivariate Testing</li>
-                <li>Hypothesis-Driven Development</li>
-                <li>Rapid Experimentation Frameworks</li>
-                <li>Feature Flagging & Rollouts</li>
-                <li>Learning Velocity</li>
-                <li>Conversion Rate Optimization</li>
-              </ul>
-            </motion.div>
+            <StickyCard
+              backgroundColor="#FFD8A8"
+              icon={<Zap size={32} />}
+              title="Experimentation"
+              items={[
+                'A/B Testing & Multivariate Testing',
+                'Hypothesis-Driven Development',
+                'Rapid Experimentation Frameworks',
+                'Feature Flagging & Rollouts',
+                'Learning Velocity',
+                'Conversion Rate Optimization'
+              ]}
+              initialRotate={1.5}
+              finalRotate={-1}
+              delay={0.7}
+            />
 
             {/* Leadership & Influence */}
-            <motion.div
-              initial={{ opacity: 0, y: 20, rotate: -2 }}
-              whileInView={{ opacity: 1, y: 0, rotate: 0.5 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.8 }}
-              className="rounded-lg p-8 shadow-lg"
-              style={{ backgroundColor: '#FFCCCB' }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
-                  <Users size={32} />
-                </div>
-                <h3
-                  className="text-3xl md:text-4xl font-black uppercase"
-                  style={{ color: '#2D2D2D' }}
-                >
-                  Leadership
-                </h3>
-              </div>
-              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
-                <li>Product Evangelism</li>
-                <li>Coaching & Mentoring</li>
-                <li>Stakeholder Influence</li>
-                <li>Team Empowerment</li>
-                <li>Executive Communication</li>
-                <li>Conflict Resolution</li>
-              </ul>
-            </motion.div>
+            <StickyCard
+              backgroundColor="#FFCCCB"
+              icon={<Users size={32} />}
+              title="Leadership"
+              items={[
+                'Product Evangelism',
+                'Coaching & Mentoring',
+                'Stakeholder Influence',
+                'Team Empowerment',
+                'Executive Communication',
+                'Conflict Resolution'
+              ]}
+              initialRotate={-2}
+              finalRotate={0.5}
+              delay={0.8}
+            />
 
             {/* Business & Growth */}
-            <motion.div
-              initial={{ opacity: 0, y: 20, rotate: 1 }}
-              whileInView={{ opacity: 1, y: 0, rotate: -1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.9 }}
-              className="rounded-lg p-8 shadow-lg"
-              style={{ backgroundColor: '#C1F0C1' }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md" style={{ color: '#2D2D2D' }}>
-                  <TrendingUp size={32} />
-                </div>
-                <h3
-                  className="text-3xl md:text-4xl font-black uppercase"
-                  style={{ color: '#2D2D2D' }}
-                >
-                  Growth
-                </h3>
-              </div>
-              <ul className="space-y-2 reading-text-small" style={{ color: '#2D2D2D' }}>
-                <li>Product-Led Growth (PLG)</li>
-                <li>Business Model Canvas</li>
-                <li>Unit Economics & P&L</li>
-                <li>Monetization Strategy</li>
-                <li>Retention & Engagement</li>
-                <li>Market Expansion</li>
-              </ul>
-            </motion.div>
+            <StickyCard
+              backgroundColor="#C1F0C1"
+              icon={<TrendingUp size={32} />}
+              title="Growth"
+              items={[
+                'Product-Led Growth (PLG)',
+                'Business Model Canvas',
+                'Unit Economics & P&L',
+                'Monetization Strategy',
+                'Retention & Engagement',
+                'Market Expansion'
+              ]}
+              initialRotate={1}
+              finalRotate={-1}
+              delay={0.9}
+            />
           </div>
         </motion.div>
       </div>

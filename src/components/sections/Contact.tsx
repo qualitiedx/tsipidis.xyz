@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen py-20 border-t-2 flex items-center"
+      className="py-20 border-t-2 flex items-center"
       style={{
         background: 'var(--bg-gradient)',
         borderColor: 'var(--border-primary)'
