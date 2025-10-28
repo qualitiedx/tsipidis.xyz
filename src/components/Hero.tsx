@@ -129,12 +129,12 @@ export default function Hero() {
             Building products that matter
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex justify-center items-center"
           >
             <motion.button
               onClick={() => scrollToSection('projects')}
@@ -147,19 +147,6 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
             >
               View Work
-            </motion.button>
-            <motion.button
-              onClick={() => scrollToSection('contact')}
-              className="px-8 py-4 border-2 uppercase font-bold tracking-tight cursor-pointer transition-all rounded-xl"
-              style={{
-                backgroundColor: 'var(--bg-primary)',
-                color: 'var(--text-primary)',
-                borderColor: 'var(--border-primary)'
-              }}
-              whileHover={{ backgroundColor: 'var(--bg-tertiary)' }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Contact
             </motion.button>
           </motion.div>
         </motion.div>

@@ -10,12 +10,10 @@ export default function Navigation() {
   const { theme, toggleTheme } = useTheme();
 
   const navItems = [
-    { id: 'about', label: 'ABOUT' },
     { id: 'experience', label: 'EXPERIENCE' },
     { id: 'industries', label: 'INDUSTRIES' },
     { id: 'projects', label: 'PROJECTS' },
-    { id: 'approach', label: 'APPROACH' },
-    { id: 'contact', label: 'CONTACT' }
+    { id: 'approach', label: 'APPROACH' }
   ];
 
   useEffect(() => {

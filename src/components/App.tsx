@@ -8,6 +8,7 @@ import Projects from './sections/Projects';
 import Approach from './sections/Approach';
 import Contact from './sections/Contact';
 import LoadingScreen from './LoadingScreen';
+import FloatingContactButton from './FloatingContactButton';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +28,7 @@ export default function App() {
           <Projects />
           <Approach />
           <Contact />
+          <FloatingContactButton />
         </>
       )}
     </ThemeProvider>
