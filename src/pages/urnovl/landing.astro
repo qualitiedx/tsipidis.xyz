@@ -1,0 +1,71 @@
+---
+import '../../styles/global.css';
+import CardStackHero from '../../components/urnovl/CardStackHero';
+import Navbar from '../../components/urnovl/Navbar';
+import Stories from '../../components/urnovl/Stories';
+import AuthorTestimonial from '../../components/urnovl/AuthorTestimonial';
+import Pages from '../../components/urnovl/Pages';
+import GetStarted from '../../components/urnovl/GetStarted';
+import Footer from '../../components/urnovl/Footer';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Urnovl Landing | Experimentation</title>
+		<meta name="description" content="Urnovl landing page for experimentation." />
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+	</head>
+	<body class="antialiased" style="background: var(--bg-gradient);">
+		<!-- Navigation Bar -->
+		<Navbar client:load />
+
+		<!-- Hero Card Stack Section -->
+		<CardStackHero client:load />
+
+		<!-- Stories Section -->
+		<Stories client:load />
+
+		<!-- Author Testimonial Section -->
+		<AuthorTestimonial client:load />
+
+		<!-- Pages Section -->
+		<Pages client:load />
+
+		<!-- Get Started Section -->
+		<GetStarted client:load />
+
+		<!-- Footer -->
+		<Footer client:load />
+
+		<!-- Custom scrollbar -->
+		<style is:global>
+			html {
+				scroll-behavior: smooth;
+			}
+
+			::-webkit-scrollbar {
+				width: 12px;
+			}
+
+			::-webkit-scrollbar-track {
+				background: var(--bg-primary);
+			}
+
+			::-webkit-scrollbar-thumb {
+				background: var(--border-primary);
+			}
+
+			::-webkit-scrollbar-thumb:hover {
+				background: var(--text-secondary);
+			}
+		</style>
+	</body>
+</html>

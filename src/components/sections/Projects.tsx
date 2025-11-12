@@ -129,22 +129,50 @@ export default function Projects() {
             />
 
             {/* Urnovl.co */}
-            <StickyCard
-              backgroundColor="#FFBB9C"
-              logo={{
-                src: "/logos/urnovl-logo.svg",
-                alt: "Urnovl Logo"
-              }}
-              title="URNOVL.CO"
-              subtitle="General Manager"
-              subtitleColor="#C2410C"
-              description="Social network for readers, writers & publishers. 10,000+ stories."
-              initialRotate={1.5}
-              finalRotate={-0.5}
-              delay={0.5}
-              onMouseEnter={() => setIsHoveringCard(true)}
-              onMouseLeave={() => setIsHoveringCard(false)}
-            />
+            <motion.div
+              initial={{ opacity: 0, y: 20, rotate: 1.5 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -0.5 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="rounded-lg shadow-lg"
+              style={{ backgroundColor: '#FFBB9C' }}
+            >
+              <a href="/urnovl/landing" className="block p-8 cursor-pointer hover:opacity-90 transition-opacity">
+                <div className="mb-6 flex justify-center">
+                  <svg className="w-[40%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 53.997" style={{ fill: '#2D2D2D' }}>
+                    <path d="M35.252,15.875v36.373h-9.375v-2.922C23.025,51.873,19.576,53,16.053,53c-5.025,0-9.527-2.326-12.377-5.852
+                         C1.352,44.299,0,40.55,0,35.15V15.875h9.752v19.648c0,3.302,0.676,4.951,1.799,6.226c1.5,1.651,3.6,2.253,5.475,2.253
+                         c4.125,0,7.125-2.779,8.475-4.502V15.875H35.252z"/>
+                    <path d="M64.119,24.5c-0.675-0.225-2.098-0.375-3.523-0.375c-4.275,0-7.65,3.074-8.85,5.25v22.873h-9.752V15.875
+                         h9.375v3.676c2.176-2.701,6.15-4.426,10.576-4.426c1.426,0,2.25,0.15,3.3,0.3L64.119,24.5z"/>
+                    <path d="M68.242,52.248V15.876h9.373v2.926c2.775-2.252,6.227-3.677,10.277-3.677c5.023,0,9.6,2.25,12.599,5.849
+                         c2.401,2.851,3.75,6.526,3.75,12.751v18.523H94.49V32.976c0-3.601-0.822-5.476-2.174-6.827c-1.273-1.273-3.225-2.023-5.477-2.023
+                         c-4.121,0-7.499,2.626-8.849,4.5v23.623H68.242z"/>
+                    <path d="M128.086,15.125c11.024,0,19.348,8.477,19.348,18.973c0,10.5-8.323,19.125-19.348,19.125
+                         c-11.025,0-19.35-8.625-19.35-19.125C108.736,23.602,117.061,15.125,128.086,15.125z M128.086,43.773
+                         c5.85,0,9.525-4.5,9.525-9.675c0-5.175-3.675-9.523-9.525-9.523s-9.525,4.349-9.525,9.523
+                         C118.561,39.273,122.236,43.773,128.086,43.773z"/>
+                    <path d="M177.375,15.875l-12.45,36.373h-9.375l-12.449-36.373h10.35l7.274,23.774l7.5-23.774H177.375z"/>
+                    <path d="M179.85,0h9.75v52.248h-9.75V0z"/>
+                  </svg>
+                </div>
+                <h3
+                  className="text-2xl md:text-3xl font-black uppercase mb-2"
+                  style={{ color: '#2D2D2D' }}
+                >
+                  URNOVL.CO
+                </h3>
+                <p
+                  className="text-sm font-bold uppercase mb-4"
+                  style={{ color: '#C2410C' }}
+                >
+                  General Manager
+                </p>
+                <p className="reading-text-small" style={{ color: '#2D2D2D' }}>
+                  Social network for readers, writers & publishers. 10,000+ stories.
+                </p>
+              </a>
+            </motion.div>
 
             {/* Spotware Systems */}
             <StickyCard
